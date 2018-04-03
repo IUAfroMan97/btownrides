@@ -21,7 +21,7 @@ export class RidesComponent implements OnInit {
     var mapProp = {
       center: new google.maps.LatLng(15.5893, 73.8143),
       zoom: 15,
-      mapTypeIdL google.maps.MapTypeId.ROADMAP
+      mapTypeIdL: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
   }
