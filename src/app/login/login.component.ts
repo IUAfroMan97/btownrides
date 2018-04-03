@@ -16,8 +16,8 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "angular4-social-logi
 })
 export class LoginComponent implements OnInit {
 
-  private user: SocialUser;
-  private loggedIn: boolean;
+  user: SocialUser;
+  loggedIn: boolean;
 
   loginData = { username:'', password:'' };
   message = '';
@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
       this.user = user;
       this.loggedIn = (user != null);
     });
+    console.log('this.user==',this.user)
   }
 
   signInWithGoogle(): void {
