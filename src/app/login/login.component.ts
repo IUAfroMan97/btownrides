@@ -4,8 +4,8 @@ import { Router } from "@angular/router";
 import { Observable } from 'rxjs/Observable';
 import { tap, catchError } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
-import { AuthService, SocialUser } from "angular4-social-login";
-import { FacebookLoginProvider, GoogleLoginProvider } from "angular4-social-login";
+//import { AuthService, SocialUser } from "angular4-social-login";
+//import { FacebookLoginProvider, GoogleLoginProvider } from "angular4-social-login";
 
  
 
@@ -16,26 +16,27 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "angular4-social-logi
 })
 export class LoginComponent implements OnInit {
 
-  user: SocialUser;
-  loggedIn: boolean;
+  //user: SocialUser;
+  //loggedIn: boolean;
 
   loginData = { username:'', password:'' };
   message = '';
   data: any;
 
-  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
+  constructor(private http: HttpClient, private router: Router/*, private authService: AuthService*/) { }
 
   ngOnInit() {
-    this.authService.authState.subscribe((user) => {
-      this.user = user;
-      this.loggedIn = (user != null);
-    });
-    console.log('this.user==',this.user)
+    //this.authService.authState.subscribe((user) => {
+      //this.user = user;
+      //this.loggedIn = (user != null);
+    //});
+    // console.log('this.user==',this.user);
   }
 
+  /*
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-    console.log('user: ', this.user)
+    console.log('user: ', this.user);
   }
  
   signInWithFB(): void {
@@ -45,6 +46,7 @@ export class LoginComponent implements OnInit {
   signOut(): void {
     this.authService.signOut();
   }
+  */
 
   login() {
     this.http.post('/api/signin',this.loginData).subscribe(resp => {

@@ -10,10 +10,10 @@ import { AppComponent } from './app.component';
 import { RidesComponent } from './rides/rides.component';
 
 
-import { SocialLoginModule, AuthServiceConfig } from "angular4-social-login";
-import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-login";
+//import { SocialLoginModule, AuthServiceConfig } from "angular4-social-login";
+//import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-login";
 
- 
+/* 
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -24,7 +24,7 @@ let config = new AuthServiceConfig([
     provider: new FacebookLoginProvider("Facebook-App-Id")
   }
 ]);
-
+*/
 
 const appRoutes: Routes = [
   {
@@ -60,7 +60,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    SocialLoginModule.initialize(config),
+    //SocialLoginModule.initialize(config),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
