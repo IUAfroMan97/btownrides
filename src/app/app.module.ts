@@ -17,7 +17,7 @@ import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-logi
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("Google-OAuth-Client-Id")
+    provider: new GoogleLoginProvider("525508065280-pd2qgsm33j7dsmsf8scrqkck2rl51i00.apps.googleusercontent.com")
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
